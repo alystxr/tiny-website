@@ -6,16 +6,26 @@
   </head>
 
   <body>
+    <script>
+        var toDoList = [];
+
+        function testAlert() {
+            alert("just testing");
+            toDoList.push(document.getElementById("todoinput").value);
+            console.log(toDoList);
+            return false;
+        }
+    </script>
+
     <p>Add a to do:</p>
     <div>
         <input type="text" id="todoinput" name="todoinput"/>
-        <button onclick="addToDo()">Add to List</button>
+        <button onclick="testAlert()">Add to List</button>
     </div>
 
-    <script>
-        function addToDo() {
-            alert("will this work?");
-        }
-    </script>
+    <p id="todooutput">(currently empty)</p>
+
+    
+
   </body>
 </html> 
